@@ -18,13 +18,18 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Starfield(100);
+        }
+
+        private void Starfield(int y)
+        {
             Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.Black);
             //int w = 0;
             int xcoord, ycoord, size, rcolor, gcolor, bcolor;
             Random randNum = new Random();
 
-            for (int w = 1; w <= 10000; w++) 
+            for (int w = 1; w <= y; w++)
             {
                 rcolor = randNum.Next(1, 255);
                 gcolor = randNum.Next(1, 255);
